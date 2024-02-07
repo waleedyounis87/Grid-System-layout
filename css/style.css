@@ -1,0 +1,464 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --gap: 30px;
+    --padding-right: 4%;
+    --padding-left: 4%;
+    --text-font: Montserrat, sans-serif;
+    --heading-font:Arvo, sans-serif;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+}
+.heading-3 {
+    max-width: 550px;
+}
+h1 {
+    font-family: Arvo, sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 400;
+}
+.caps {
+    font-family: Montserrat, sans-serif;
+    
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.caps.grey{
+    color: #9fa3a7;
+}
+.caps.white{
+    color: #fff;
+}
+.grey-text {
+    color: #9fa3a7;
+}
+.container{
+    width: 100%;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) 0.5fr;
+    grid-template-columns: repeat(3,1fr) 25%;
+    grid-template-areas: 
+    "iphone iphone learn learn"
+    "keyboard mac mac icloud"
+    "games choices choices icloud"
+    "twitter popular vision vision"
+    ;
+}
+.container > div{
+    background-color: lightcoral;
+}
+.landing{
+    background-color: #fff !important;
+    grid-area: iphone;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--gap);
+}
+.landing h3
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.landing .iphone-block{
+    width: 40%;
+}
+.landing img{
+    width: 35%;
+    margin-top: 40px;
+    align-self: flex-end;
+}
+.learn-more{
+    grid-area: learn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f7f8f9 !important;
+    
+}
+.learn-more a
+{
+    color: #27b9c2;
+    text-decoration: underline;
+}
+.learn-more h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* ============keyboard section============ */
+.keyboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #f05638 !important;
+}
+.keyboard h3{
+    text-align: center;
+    max-width: 200px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+}
+.keyboard img{
+    width: 60%;
+}
+.keyboard{
+    grid-area: keyboard;
+}
+.arrow-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.keyboard a{
+    color: yellow;
+}
+/* ============== mac section ================ */
+.mac{
+    display: flex;
+    overflow: hidden;
+    padding-top: 68px;
+    padding-right: 4%;
+    padding-left: 4%;
+    justify-content: space-around;
+    background-color: #fff !important;
+}
+.mac1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 180px;
+}
+.mac1 h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.mac1 p{
+    font-family: Montserrat, sans-serif;
+    color: #9fa3a7;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.mac1 img{
+    position: relative;
+    left: -160%;
+    width: 250%;
+    max-width: none;
+    margin-top: 20px;
+}
+.mac2{
+    width: 40%;
+}
+.mac2 a{
+    color: #27b9c2;
+}
+/* ========== icloud section =========== */
+.icloud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f76bc !important;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+   
+}
+.icloud .text-block {
+    padding: 2px 13px 1px 30px;
+    border-radius: 60px;
+    background-color: hsla(0, 0%, 100%, .08);
+    font-size: 10px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    margin-bottom: 10px;
+}
+.icloud .text-block i{
+    color: orange;
+}
+.icloud .img-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8166b0 !important;
+    width: 373px;
+    height: 373px;
+    border-radius: 50%;
+}
+.icloud .img-box img{
+    width: 65%;
+}
+.icloud h3{
+    font-family: Arvo, sans-serif;
+    margin-block:10px;
+    font-size: 32px;
+    line-height: 36px;
+}
+.button {
+    margin-top: 30px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background-color: #ffc80a;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    border: none;
+    font-family: var(--text-font);
+}
+.icloud .icloud-text{
+    font-size: 15px;
+    padding-inline: 10px;
+}
+/* ========== games section ========== */
+.games{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f8f9 !important;
+}
+.games h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.games img{
+    width: 60%;
+}
+.games a{
+    color: #27b9c2;
+}
+ /* ======= best choices ========== */
+.best-choices{
+    position: relative;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #93b6b7 !important;
+    background-image: url("https://uploads-ssl.webflow.com/5bc242f45a5ed923b1704210/5bc2f42d5a5ed97dab707e7e_UX.png");
+    background-position: 50% 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+}
+.best {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #fa684f;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.best-choices h3{
+    font-family: Arvo, sans-serif;
+    display: block;
+    max-width: 275px;
+    margin: auto;
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+}
+.best-choices img{
+    position: relative;
+    left: -7%;
+    width: 90%;
+}
+
+/* =========== twitter section =========== */
+.twitter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38d5f4 !important;
+}
+.twitter .twitter-block{
+    display: flex;
+    width: 240px;
+    height: 240px;
+    padding-right: 34px;
+    padding-left: 34px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #35cfed !important;
+    text-align: center;
+    color: #fff;
+}
+.twitter .twitter-block h3 , div.popular h3 , .vision h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    
+}
+/**popular**/
+div.popular{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f8f9 !important;
+}
+.best._2{
+    position: static;
+    background-color: #7bc424;
+    color: #fff;
+}
+/* vision */
+.vision{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c !important;
+    color: #fff;
+}
+.vision h3{
+    width: 34%;
+}
+.vision img{
+    width: 35%;
+    position: relative;
+    left: -15%;
+}
+
+
+.mac{
+    grid-area: mac;
+}
+.icloud{
+    grid-area: icloud;
+}
+.games{
+    grid-area: games;
+}
+.best-choices{
+    grid-area: choices;
+}
+.twitter{
+    grid-area: twitter;
+}
+.popular{
+    grid-area: popular;
+}
+.vision{
+    grid-area: vision;
+}
+
+
+@media screen and (max-width:992px) {
+    .container{
+      
+        grid-template-rows: repeat(6, 1fr) 0.5fr 1fr;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "learn learn"
+        "iphone iphone"
+        "keyboard games"
+        "mac mac"
+        "twitter icloud"
+        "choices icloud"
+        "popular popular"
+        "vision vision"
+        ;
+    }
+    .mac1 img {
+        position: relative;
+        left: -160%;
+        width: 260%;
+        /* max-width: 493px; */
+        margin-top: 103px;
+        display: block;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        grid-template-rows: 1fr 1fr repeat(2, 1fr) 1.5fr 0.5fr 0.75fr 1.5fr 0.5fr 0.25fr 0.5fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "learn"
+        "iphone "
+        "keyboard "
+        "games"
+        "mac"
+        "twitter"
+        "choices "
+        "icloud"
+        "icloud"
+        "popular"
+        "vision "
+        ;
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .landing img{
+        width: 50%;
+        margin-top: 40px;
+        align-self: center;
+    }
+    .landing .iphone-block{
+        width: 100%;
+    }
+    .mac{
+        flex-direction: column;
+        width: 100%;
+    }
+    .mac1, .mac2{
+        width: 100%;
+        max-width: 80%;
+    }
+    .mac1 img{
+        left: -115%;
+        width: 200%;
+        margin-top: 40px;
+    }
+   
+}
